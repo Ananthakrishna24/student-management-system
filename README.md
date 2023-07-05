@@ -12,9 +12,7 @@
    ```bash
    git clone https://github.com/your-username/student-management-system.git
    
-Navigate to the project directory:
-
-Install the dependencies and run:
+Navigate to the project directory and Install the dependencies then run:
 
    ```bash
    cd student-management-system && npm install && node server.js
