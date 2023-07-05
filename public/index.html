@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-5">Student Management System</h1>
+
+    <div class="row mt-5">
+      <div class="col-md-6">
+        <h2>Add Student</h2>
+        <form id="addStudentForm">
+          <div class="form-group">
+            <label for="fname">First Name:</label>
+            <input type="text" class="form-control" id="fname" name="fname" required>
+          </div>
+
+          <div class="form-group">
+            <label for="lname">Last Name:</label>
+            <input type="text" class="form-control" id="lname" name="lname" required>
+          </div>
+
+          <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" class="form-control" id="dob" name="dob" required>
+          </div>
+
+          <div class="form-group">
+            <label for="parentName">Parent Name:</label>
+            <input type="text" class="form-control" id="parentName" name="parentName" required>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" class="form-control" id="address" name="address" required>
+          </div>
+
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" class="form-control" id="city" name="city" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" required>
+          </div>
+
+          <div class="form-group">
+            <label for="grade">Grade:</label>
+            <input type="text" class="form-control" id="grade" name="grade" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Add Student</button>
+        </form>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Add Marks</h2>
+        <form id="addMarksForm">
+          <div class="form-group">
+            <label for="subjectName">Subject Name:</label>
+            <input type="text" class="form-control" id="subjectName" name="subjectName" required>
+          </div>
+
+          <div class="form-group">
+            <label for="marks">Marks:</label>
+            <input type="number" class="form-control" id="marks" name="marks" required>
+          </div>
+
+          <div class="form-group">
+            <label for="studentId">Student ID:</label>
+            <input type="number" class="form-control" id="studentId" name="studentId" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Add Marks</button>
+        </form>
+      </div>
+    </div>
+
+    <h2 class="mt-5">Student Details</h2>
+    <table id="studentTable" class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Date of Birth</th>
+          <th>Parent Name</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>Phone Number</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h2 class="mt-5">Students with Average Marks > 60</h2>
+    <table id="averageMarksTable" class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Average Marks</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

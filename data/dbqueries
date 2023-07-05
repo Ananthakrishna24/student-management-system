@@ -1,0 +1,33 @@
+CREATE TABLE IF NOT EXISTS students (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  fname TEXT,
+  lname TEXT,
+  dob DATE,
+  parentName TEXT,
+  address TEXT,
+  city TEXT,
+  phoneNumber TEXT,
+  grade TEXT
+);
+
+CREATE TABLE IF NOT EXISTS marks (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  subjectName TEXT,
+  marks INTEGER,
+  studentId INTEGER,
+  FOREIGN KEY (studentId) REFERENCES students (id)
+);
+
+INSERT INTO students (fname, lname, dob, parentName, address, city, phoneNumber, grade)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+
+INSERT INTO marks (subjectName, marks, studentId)
+VALUES (?, ?, ?);
+
+SELECT * FROM students;
+
+SELECT students.id, students.fname, students.lname, AVG(marks.marks) AS average
+FROM students
+INNER JOIN marks ON students.id = marks.studentId
+GROUP BY students.id, students.fname, students.lname
+HAVING average > 60;
